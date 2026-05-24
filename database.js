@@ -7,8 +7,11 @@ const { MongoClient } = require("mongodb");
 // Obtengo la URI de conexión desde mis variables de entorno
 const uri = process.env.MONGO_URI;
 
-// Creo una instancia del cliente de MongoDB con la URI de mi base de datos
-const client = new MongoClient(uri);
+// Agrego tlsAllowInvalidCertificates para resolver el conflicto de SSL con Node.js 24
+const client = new MongoClient(uri, {
+  tls: true,
+  tlsAllowInvalidCertificates: true
+});
 
 // Defino mi función asíncrona para conectarme a la base de datos de forma limpia
 async function connectDB() {
