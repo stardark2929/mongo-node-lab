@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:3001/api";
+const API = "https://mongo-node-lab-0ht8.onrender.com/api";
 
 export default function Pedidos() {
   const [pedidos, setPedidos] = useState([]);

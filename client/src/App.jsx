@@ -7,7 +7,7 @@ import PedidosCiudad from "./pages/PedidosCiudad";
 import NuevoCliente from "./pages/NuevoCliente";
 import "./App.css";
 
-const API = "http://localhost:3001/api";
+const API = "https://mongo-node-lab-0ht8.onrender.com/api";
 
 function Dashboard() {
   const [frecuentes, setFrecuentes] = useState([]);

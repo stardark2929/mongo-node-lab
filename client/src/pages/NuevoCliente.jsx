@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API = "http://localhost:3001/api";
+const API = "https://mongo-node-lab-0ht8.onrender.com/api";
 
 export default function NuevoCliente() {
   const [form, setForm] = useState({ nombre: "", correo: "", ciudad: "", edad: "" });
@@ -42,7 +42,7 @@ export default function NuevoCliente() {
     } catch (err) {
       setMsg({
         type: "error",
-        text: `No se pudo conectar al servidor en http://localhost:3001. ¿Está corriendo "node server.js"? (${err.message})`,
+        text: `No se pudo conectar al servidor. Verifica que el backend esté corriendo. (${err.message})`,
       });
     } finally {
       setLoading(false);
