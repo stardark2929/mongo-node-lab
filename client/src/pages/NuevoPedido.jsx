@@ -89,7 +89,7 @@ export default function NuevoPedido() {
   return (
     <div>
       <div className="page-header">
-        <h1>PENEEEE</h1>
+        <h1>clientes bachiturros</h1>
       </div>
 
       {msg && (
